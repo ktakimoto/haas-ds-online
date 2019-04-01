@@ -3,16 +3,6 @@ import numpy as np
 import pandas as pd
 
 # utility function for notebook 2 
-def change_to_range(x):
-    """Given an integer x, output a string range
-    containing x."""
-    i = math.ceil(x / 10)
-    upper_bound = math.ceil(x / 10) * 10
-    lower_bound = upper_bound - 9
-    alphabet = "ABCEDFGHIJKLMNOPQRSTUVWXYZ"
-    return("{0}: {1}-{2}".format(alphabet[i - 1], lower_bound, upper_bound))
-
-# utility function for notebook 2 
 def conversion_rate(array):
     """Given an array with values whether or not a user converted,
     return the proportion of users that converted."""
@@ -49,26 +39,6 @@ def rename_rocketfuel(rf_tbl):
 
     ads_rlbl.to_csv("data/rocketfuel_data_renamed.csv")
 
-# utility function for notebook 3 section 1b
-def calc_perm_rate_diff():
-    """Randomly permute the conversion data and return 
-    the difference in conversion rates between the control and 
-    experimental groups."""
-    perm = np.random.permutation(conv_pd)
-    control = perm[test_pd == 0]
-    exper = perm[test_pd == 1]
- 
-    return np.mean(exper) - np.mean(control)
-
-# Data needed for calc_perm_rate_diff to work
-# the rocket fuel data as a pandas dataframe
-ads_pd = pd.read_csv("data/rocketfuel_data.csv")
-
-# array of the conversion data from the rocketfuel case
-conv_pd = ads_pd.converted
-
-# array of the test group data from the rocketfuel case
-test_pd = ads_pd.test
 
 #utility function for notebook 4 section 2a
 def format_X(table):
