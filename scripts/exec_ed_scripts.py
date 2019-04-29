@@ -2,6 +2,12 @@ import math
 import numpy as np
 import pandas as pd
 
+# utility function for histograms notebook
+def round_down_nearest_10(i):
+    """Given an integer i, round i down to the nearest multiple of 10."""
+    return math.floor(i/10) * 10
+
+
 # utility function for notebook 2 
 def conversion_rate(array):
     """Given an array with values whether or not a user converted,
