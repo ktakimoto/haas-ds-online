@@ -1,0 +1,68 @@
+test = {
+    'name': 'cpm',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like total_ads hasn't been given a value.
+                    >>> # Did you remember to run the cell where total_ads was defined?
+                    >>> 'total_ads' in vars()
+                    >>>
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # Double-check that you've entered the correct number of ads
+                    >>> 14000000 < total_ads < 15000000
+                    >>>
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like cpm hasn't been given a value.
+                    >>> # Did you remember to run the cell where cpm was defined?
+                    >>> 'cpm' in vars()
+                    >>>
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Double-check your value of CPM.
+                    >>> # Check the yellow exercise cell for the values
+                    >>> 8.5 < cpm < 9.5
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like cost_per_ad hasn't been given a value.
+                    >>> # Did you remember to run the cell where cost_per_ad was defined?
+                    >>> 'cost_per_ad' in vars()
+                    >>>
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Double-check your value of CPM.
+                    >>> # Check the yellow exercise cell for the values                    
+                    >>> 8.5 < cpm < 9.5
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Remember, CPM is the cost per THOUSAND ads.
+                    >>> # What do you need to do to get the cost per ad?
+                    >>> cost_per_ad == cpm / 1000
+                    True
+                    """
+                },                
+            ]
+        }
+    ]
+}

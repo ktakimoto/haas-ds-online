@@ -1,0 +1,34 @@
+test = {
+    'name': 'col-index',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the converted_col variable hasn't been defined.
+                    >>> # Did you remember to run the cell?
+                    >>> converted_col in vars()
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # The answer you computed is not a column.
+                    >>> # If you're indexing the "converted" column, you should see a numbered sequence
+                    >>> # of True and False values under the cell.
+                    >>> type(converted_col) == pandas.core.series.Series
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Are you sure you have the right column?
+                    >>> # Remember, we're asking you to index the "converted" column.
+                    >>> converted_col[10] == False
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

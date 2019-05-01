@@ -1,0 +1,47 @@
+test = {
+    'name': 'describe',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the ads_description variable hasn't been defined.
+                    >>> # Did you remember to run the cell?
+                    >>> ads_description in vars()
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like you're close! You've accessed a method using dot notation.
+                    >>> # Unlike attributes, which are also accessed with dot notation, methods need to 
+                    >>> # be called with parentheses.
+                    >>> # Make sure you have parentheses to the right of your method name to call it.
+                    >>> # Look at the cell where we used the "head" method for an example.
+                    >>> type(ads_description) == method
+                    False
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # The answer you computed is not a DataFrame.
+                    >>> # If you're using the describe method, you should get back another DataFrame,
+                    >>> # and you should see a table of summary statistics under the cell.
+                    >>> type(ads_description) == pandas.core.frame.DataFrame
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # The answer you computed does not have the correct format.
+                    >>> # If you're using the describe method correctly, you should see a Dataframe
+                    >>> # with columns of summary statistics for the "user id", "total ads", 
+                    >>> # and "most ads hour" columns.
+                    >>> ads_description.columns == Index(['user id', 'total ads', 'most ads hour'], dtype='object')
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

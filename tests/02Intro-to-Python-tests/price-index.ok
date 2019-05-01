@@ -1,0 +1,33 @@
+test = {
+    'name': 'price-index',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the next_to_last_price variable hasn't been given a value.
+                    >>> # Did you remember to run the cell where the variable was defined?
+                    >>> 'next_to_last_price' in vars()
+                    >>>
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # You're close- this is the LAST item in the prices array.
+                    >>> # Remember: in Python, the array indexing starts counting from 0, not 1.
+                    >>> next_to_last_price == 124.99
+                    True
+                    """
+                },  
+                {
+                    'code': r"""
+                    >>> # 
+                    >>> next_to_last_price == 130
+                    True
+                    """
+                },                
+            ]
+        }
+    ]
+}

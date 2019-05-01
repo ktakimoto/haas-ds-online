@@ -1,0 +1,43 @@
+test = {
+    'name': 'control-group',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the control variable hasn't been defined.
+                    >>> # Did you remember to run the cell?
+                    >>> control in vars()
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Your answer doesn't have the right format yet-
+                    >>> # it should be a DataFrame, meaning it looks like a table.
+                    >>> type(control) == pandas.core.frame.DataFrame
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Your answer is an empty DataFrame (no rows).
+                    >>> # This can happen when the condition you're looking for isn't found in the DataFrame.
+                    >>> # Double-check your spelling and capitalization!
+                    >>> control.shape[0] == 0
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Your answer contains some rows that were not from the control group.
+                    >>> # What condition can you use to ONLY get subjects in the control group?
+                    >>> # Hint: subjects in the control group saw a "psa" instead of an "ad".
+                    >>> np.all(control['test group'] == 'psa')
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

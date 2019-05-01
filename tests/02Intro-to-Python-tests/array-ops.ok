@@ -1,0 +1,92 @@
+test = {
+    'name': 'array-ops',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like price_plus_10 hasn't been given a value.
+                    >>> # Did you remember to run the cell where price_plus_10 was defined?
+                    >>> 'price_plus_10' in vars()
+                    >>>
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # It looks like price_plus_10 isn't an array.
+                    >>> # price_plus_10 should be an array with the same number of items as the prices array.
+                    >>> type(price_plus_10) == np.ndarray
+                    >>>
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Some of the values in the price_plus_10 array are off.
+                    >>> # The values should be the same as the values in prices,
+                    >>> # with each value increased by 10.
+                    >>> (price_plus_10[0] == 115.99) and (price_plus_10[3] == 140)
+                    >>>
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like taxes_reduced_by_half hasn't been given a value.
+                    >>> # Did you remember to run the cell where taxes_reduced_by_half was defined?
+                    >>> 'taxes_reduced_by_half' in vars()
+                    >>>
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # It looks like taxes_reduced_by_half isn't an array.
+                    >>> # taxes_reduced_by_half should be an array with the same number of items as the taxes array.
+                    >>> type(taxes_reduced_by_half) == np.ndarray
+                    >>>
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Some of the values in the taxes_reduced_by_half array are off.
+                    >>> # The values should be the same as the values in taxes,
+                    >>> # with each value divided by 2.
+                    >>> (taxes_reduced_by_half[3] == 0.05) and (taxes_reduced_by_half[4] == 0.042)
+                    >>>
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like max_price hasn't been given a value.
+                    >>> # Did you remember to run the cell where max_price was defined?
+                    >>> 'max_price' in vars()
+                    >>>
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # It looks like max_price isn't a number.
+                    >>> # max_price should be a single number, not an array.
+                    >>> type(max_price) == int
+                    >>>
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # The value of max_price isn't quite right.
+                    >>> # Remember to use the np.max function on the prices array to get the correct value.
+                    >>> 125 < max_price < 140
+                    >>>
+                    True
+                    """
+                },                
+            ]
+        }
+    ]
+}
