@@ -13,10 +13,8 @@ test = {
                 },
                 {
                     'code': r"""
-                    >>> # Make sure you've put your answer inside quotation marks
-                    >>> Traceback (most recent call last):
-                    >>> ...
-                    >>> NameError: ...
+                    >>> # Remember to replace the ellipses with your answer.
+                    >>> answer == ...
                     False
                     """
                 },
