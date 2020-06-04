@@ -1,0 +1,28 @@
+test = {
+    'name': 'opp_cost',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the opp_cost variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('opp_cost' in vars()) and (opp_cost != ...)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Your opportunity cost isn't quite correct yet.
+                    >>> # Double-check the spelling and values of the convert_val, num_control,
+                    >>> # and proportion_diff variables, and remember that Python multiplication
+                    >>> # uses a * symbol.
+                    >>> 5000 < opp_cost < 8000
+                    True
+                    """
+                }
+
+            ]
+        }
+    ]
+}

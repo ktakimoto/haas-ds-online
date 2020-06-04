@@ -1,0 +1,38 @@
+test = {
+    'name': 'predict-test',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the predict_test variable hasn't been defined.
+                    >>> # Did you remember to run the cell?
+                    >>> 'predict_test' in vars()
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Double-check how you assigned the name predict_test.
+                    >>> # predict_test should be a ordered collection of numbers with one
+                    >>> # item for each row in bike_test.
+                    >>> len(predict_test) == bike_test.shape[0]
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # The values in predict_test may not be quite correct.
+                    >>> # Make sure you use the dot product with the correct X matrix
+                    >>> # and the beta vector to calculate predict_test.
+                    >>> # Also make sure that your random seed was set to 28 when
+                    >>> # you split the training and test data.
+                    >>> predict_test.iloc[10] == X_test.iloc[10, :] @ beta
+                    True
+                    """
+                },
+
+            ]
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+test = {
+    'name': 'expl-matrix',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the expl_vars variable hasn't been defined.
+                    >>> # Did you remember to run the cell?
+                    >>> 'expl_vars' in vars()
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like the X_test variable hasn't been defined.
+                    >>> # Did you remember to run the cell?
+                    >>> 'X_test' in vars()
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # Check that expl_vars is a list.
+                    >>> # Remember, Python lists are enclosed in square brackets.
+                    >>> type(expl_vars) == list
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # You either have too many or too few explanatory variables in expl_vars.
+                    >>> # Double-check that you have the same variables used to make X_train.
+                    >>> len(expl_vars) == 3
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Take another look at the variables in expl_vars.
+                    >>> # They should match the explanatory variables used to make X_train.
+                    >>> ("temp" in expl_vars) and ("is work day" in expl_vars) and ("season" in expl_vars)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like X_test isn't quite in the right format.
+                    >>> # Make sure you're using the make_X(...) function to create X_test.
+                    >>> # If you need a hint, look at how X_train was created.
+                    >>> (type(X_test) == pd.core.frame.DataFrame) and ("intercept" in X_test.columns)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like X_test isn't the right shape.
+                    >>> # X_test should have the same number of rows as our test data.
+                    >>> # Check that you only used the test data to create X_test.
+                    >>> X_test.shape[0] == bike_test.shape[0]
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

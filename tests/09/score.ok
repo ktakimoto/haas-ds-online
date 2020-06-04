@@ -1,0 +1,35 @@
+test = {
+    'name': 'score',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the knn_score variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('knn_score' in vars()) and (knn_score != ...)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # The KNN score isn't the right type of Python object.
+                    >>> # Did you generate the score using your knn model's 
+                    >>> # 'score' method?
+                    >>> type(knn_score) == np.float64
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Your KNN model score is unusually high or low. 
+                    >>> # Double-check that you used the explanatory variables
+                    >>> # specified 9c. 
+                    >>> 0.75 < knn_score < 0.85
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

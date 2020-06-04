@@ -1,0 +1,61 @@
+test = {
+    'name': 'vars',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the expl_vars_attrition variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('expl_vars_attrition' in vars()) and (expl_vars_attrition != [...])
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Your list of explanatory variables appears to contain a
+                    >>> # variable not contained in the data set.
+                    >>> # Check that all items in your list are spelled and capitalized
+                    >>> # correctly, and that each variable name is in quotation marks.
+                    >>> np.all([(i in attrition.columns) for i in expl_vars_attrition])
+                    True
+                    """
+                },
+                {
+                    'code':r"""
+                    >>> # Your list of explanatory variables contains one or more non-numerical
+                    >>> # variables. Double-check that you only include the three numerical variables
+                    >>> # specified in the question.
+                    >>> np.all([attrition[c].dtype == 'int64' for c in expl_vars_attrition])
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Make sure you haven't included the response variable as
+                    >>> # one of your explanatory variables!
+                    >>> "Attrition" in expl_vars_attrition
+                    False
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # It looks like the resp_var_attrition variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('resp_var_attrition' in vars()) and (resp_var_attrition != ...)
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # Check how you assigned resp_var_attrition.
+                    >>> # resp_var_attrition should be the name of the column that
+                    >>> # says whether or not an employee was lost to attrition.
+                    >>> (type(resp_var_attrition) == str) and (len(resp_var_attrition) == 9)
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

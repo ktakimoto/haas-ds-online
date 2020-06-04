@@ -1,0 +1,35 @@
+test = {
+    'name': 'roi',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the roi variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('roi' in vars()) and (roi != ...)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Take another look at your order of operations.
+                    >>> # Remember, unless you use parentheses, division will be done before subtraction.
+                    >>> roi == (benefit - 1)
+                    False
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # Your ROI is not quite correct yet.
+                    >>> # Try checking your cost and benefit variables and how you apply the formula
+                    >>> # (remember that Python division is done with a single /) for correctness.
+                    >>> 0.3 < roi < 0.35
+                    True
+                    """
+                },
+
+            ]
+        }
+    ]
+}

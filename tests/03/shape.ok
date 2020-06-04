@@ -1,0 +1,34 @@
+test = {
+    'name': 'shape',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the data_shape variable hasn't been defined.
+                    >>> # Did you remember to run the cell?
+                    >>> 'data_shape' in vars()
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # data_shape should be a tuple: two numbers separated by a comma in parentheses.
+                    >>> # Make sure you are getting the shape using the "shape" attribute on the "ads" DataFrame.
+                    >>> type(data_shape) == tuple
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # data_shape doesn't have the right value or is generating an error.
+                    >>> # Take another look at how you use the shape attribute and how 
+                    >>> # you assigned the name data_shape.
+                    >>> data_shape[0] == 588101
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

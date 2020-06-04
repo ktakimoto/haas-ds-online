@@ -1,0 +1,79 @@
+test = {
+    'name': 'benefit',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the convert_val variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('convert_val' in vars()) and (convert_val != ...)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # convert_val isn't the right data type yet.
+                    >>> # You want it to be the dollar value of a converted user.
+                    >>> # Check that you entered the value as a number (i.e. NOT inside quotation marks).
+                    >>> type(convert_val) == int
+                    True
+                    """
+                },                 
+                {
+                    'code': r"""
+                    >>> # convert_val isn't quite the right amount.
+                    >>> # How much did TaskBella say a converted user was worth?
+                    >>> 38 <= convert_val <= 50
+                    True
+                    """
+                }, 
+                {
+                    'code': r"""
+                    >>> # It looks like the proportion_diff variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('proportion_diff' in vars()) and (proportion_diff != ...)
+                    True
+                    """
+                },               
+                {
+                    'code': r"""
+                    >>> # Double-check how you calculated the difference between the proportions.
+                    >>> # The difference should be positive.
+                    >>> # Did you subtract the two proportions in the correct order?
+                    >>> proportion_diff >= 0
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # proportion_diff isn't the right amount yet.
+                    >>> # Your two proportions are very small, so the difference should be smaller.
+                    >>> # Check that you're using the correct variables in the difference equation.
+                    >>> 0 < proportion_diff < 0.01
+                    True
+                    """
+                },   
+                {
+                    'code': r"""
+                    >>> # It looks like the benefit variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('benefit' in vars()) and (benefit != ...)
+                    True
+                    """
+                },                 
+                {
+                    'code': r"""
+                    >>> # Your calculated benefit isn't quite right yet.
+                    >>> # Double-checked how you applied the formula and what variables you used.
+                    >>> # num_exper, convert_val, and proportion_diff will all be useful.
+                    >>> # If you made corrections to one of the above variables, make sure
+                    >>> # you re-ran the cell to re-calculate the benefit.
+                    >>> 150000 <= benefit <= 175000
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

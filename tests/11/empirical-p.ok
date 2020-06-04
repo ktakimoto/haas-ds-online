@@ -1,0 +1,84 @@
+test = {
+    'name': 'empirical-p',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the more_than_count variable hasn't been defined.
+                    >>> # Did you remember to run the cell and fill in your answer?
+                    >>> ('more_than_count' in vars()) and (more_than_count != ...)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # more_than_count isn't the right data type yet.
+                    >>> # Since it's a count of rows, it should be a number.
+                    >>> # Make sure you used the shape attribute AND indexed the 0th item
+                    >>> # from the shape using square brackets to get the number of rows.
+                    >>> # Notebook 10 section A has a review of how to use "shape".
+                    >>> type(more_than_count) == int
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # more_than_count isn't the right number of rows yet.
+                    >>> # Did you index the correct value from the shape of the 
+                    >>> # more_than_original DataFrame? Remember, the rows are the 0th
+                    >>> # item and the columns are the 1st item.
+                    >>> 0 <= more_than_count <= 10
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like the total_diffs_count variable hasn't been defined.
+                    >>> # Did you remember to run the cell and fill in your answer?
+                    >>> ('total_diffs_count' in vars()) and (total_diffs_count != ...)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # total_diffs_count isn't the right data type yet.
+                    >>> # Since it's a count of rows, it should be a number.
+                    >>> # Make sure you used the shape attribute AND indexed the 0th item
+                    >>> # from the shape using square brackets to get the number of rows.
+                    >>> # Notebook 10 section A has a review of how to use "shape".
+                    >>> type(total_diffs_count) == int
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # total_diffs_count isn't the right number of rows yet.
+                    >>> # Did you index the correct value from the shape of the 
+                    >>> # differences DataFrame? Remember, the rows are the 0th
+                    >>> # value and the columns are the 1st value.
+                    >>> total_diffs_count == n
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # It looks like the empirical_p variable hasn't been defined.
+                    >>> # Did you remember to run the cell and fill in your answer?
+                    >>> ('empirical_p' in vars()) and (empirical_p != ...)
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # Your empirical P-value is currently a bit off.
+                    >>> # Try checking that you used more_than_count and 
+                    >>> # total_diffs_count in the correct order in the p-value formula.
+                    >>> 0 <= empirical_p <= 0.06
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

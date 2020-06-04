@@ -1,0 +1,36 @@
+test = {
+    'name': 'model',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the knn variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('knn' in vars()) and (knn != ...)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Remember to use empty parentheses next to your KNeighborsClassifier
+                    >>> # expression to actually create the model object.
+                    >>> # Check the code for how we made the LinearRegression object for a hint.
+                    >>> knn == KNeighborsClassifier
+                    False
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # Your KNN model isn't the right type of Python object yet.
+                    >>> # Remember, knn should be a KNeighborsClassifier created with  
+                    >>> # nothing inside the parentheses.
+                    >>> # Look at how the LinearRegression model was made in 9b for a hint.
+                    >>> type(knn) == sklearn.neighbors.classification.KNeighborsClassifier
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

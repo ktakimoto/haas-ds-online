@@ -1,0 +1,42 @@
+test = {
+    'name': 'price-index',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the next_to_last_price variable hasn't been defined yet.
+                    >>> # Did you remember to add your answer and run the cell?
+                    >>> 'next_to_last_price' in vars()
+                    True
+                    """
+                },  
+                {
+                    'code': r"""
+                    >>> # Your answer isn't the right type of Python object yet.
+                    >>> # next_to_last_price should be a number; one of the values in the prices array.
+                    >>> # Make sure you're accessing (indexing) the value using square brackets.
+                    >>> type(next_to_last_price) == np.float64
+                    True
+                    """
+                }, 
+                {
+                    'code': r"""
+                    >>> # You're close- this is the LAST item in the prices array.
+                    >>> # Remember: in Python, the array indexing starts counting from 0, not 1.
+                    >>> next_to_last_price == 124.99
+                    False
+                    """
+                },  
+                {
+                    'code': r"""
+                    >>> # Double-check which value you're indexing from the prices array;
+                    >>> # what index do you need to use to get the second-to-last item?
+                    >>> next_to_last_price == 130
+                    True
+                    """
+                },                
+            ]
+        }
+    ]
+}

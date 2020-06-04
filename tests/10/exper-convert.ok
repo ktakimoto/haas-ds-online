@@ -1,0 +1,76 @@
+test = {
+    'name': 'exper-convert',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the exper_convert_proportion variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('exper_convert_proportion' in vars()) and (exper_convert_proportion != ...)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # num_exper isn't the right data type yet.
+                    >>> # You want it to be the total number of people in the experimental group.
+                    >>> # Check that you calculated it using the shape method on your experiment
+                    >>> # DataFrame, AND that you indexed the number of rows using square brackets.
+                    >>> type(num_exper) == int
+                    True
+                    """
+                },                 
+                {
+                    'code': r"""
+                    >>> # Double-check how you counted the number of people in the experimental group.
+                    >>> # Did you accidentally use the control group DataFrame?
+                    >>> # Did you index the correct value from the DataFrame shape?
+                    >>> 500000 <= num_exper <= 600000
+                    True
+                    """
+                },  
+                {
+                    'code': r"""
+                    >>> # num_exper_converts isn't the right data type yet.
+                    >>> # You want it to be the number of people who converted in the experimental group.
+                    >>> # Check that you calculated it using the shape method on your exper_convert
+                    >>> # DataFrame, AND that you indexed the number of rows using square brackets.
+                    >>> type(num_exper_converts) == int
+                    True
+                    """
+                },                 
+                {
+                    'code': r"""
+                    >>> # Double-check how you counted the number of conversions in the experimental group.
+                    >>> # Did you accidentally use the control group DataFrame?
+                    >>> # Did you filter for only the people where "converted" == True?
+                    >>> # Did you index the correct value from the exper_converts shape?
+                    >>> 10000 < num_exper_converts < 20000
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # exper_convert_proportion isn't the right data type yet.
+                    >>> # Your proportion should be a number between 0 and 1 (inclusive).
+                    >>> # Check that any variables you're using to calculate it are also numbers.
+                    >>> type(exper_convert_proportion) == float
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # Your experiment group conversion proportion isn't quite right yet.
+                    >>> # Make sure that you used the num_exper and num_exper_converts variables
+                    >>> # you calculated, and that you applied the formula correctly.
+                    >>> # If you made corrections to num_exper or num_exper_converts, make sure
+                    >>> # you rerun the exper_convert_proportion cell to recalculate the proportion.
+                    >>> 0 <= exper_convert_proportion <= 0.05
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

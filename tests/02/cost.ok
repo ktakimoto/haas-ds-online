@@ -1,0 +1,34 @@
+test = {
+    'name': 'cost',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the cost variable hasn't been defined yet.
+                    >>> # Did you remember to add your answer and run the cell?
+                    >>> ('cost' in vars()) and (cost != ...)
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # Look again at your calculation of the cost.
+                    >>> # Did you accidentally use the cost per thousand ads (cpm)?
+                    >>> cost == 14597182 * 9
+                    False
+                    """
+                },    
+                {
+                    'code': r"""
+                    >>> # Your cost isn't quite in the right range.
+                    >>> # Check your cost_per_ad, total_ads, and how you 
+                    >>> # applied the cost formula.
+                    >>> 131300 < cost < 131400
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+test = {
+    'name': 'best-model',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the best_expl_vars variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('best_expl_vars' in vars()) and (best_expl_vars != ...)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # best_expl_vars isn't the right type yet.
+                    >>> # Remember, best_expl_vars should be a list (enclosed in 
+                    >>> # square brackets) containing at least one explanatory variable name,
+                    >>> # and each variable name should be in quotes.
+                    >>> (type(best_expl_vars) == list) and (len(best_expl_vars) >= 1)
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like the best_intercept variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('best_intercept' in vars()) and (best_intercept != ...)
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # Look at how you assigned best_intercept.
+                    >>> # best_intercept should be True if your model used an intercept,
+                    >>> # and False otherwise
+                    >>> type(best_intercept) == bool
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like the best_response_var variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('best_response_var' in vars()) and (best_response_var != ...)
+                    True
+                    """
+                }, 
+                {
+                    'code': r"""
+                    >>> # Check how you assigned best_response_var.
+                    >>> # It should be the name of one of the response variables
+                    >>> # enclosed in quotation marks (i.e. a string).
+                    >>> type(best_response_var) == str
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # It looks like the best_beta variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('best_beta' in vars()) and (best_beta != ...)
+                    True
+                    """
+                }, 
+                {
+                    'code': r"""
+                    >>> # Take another look at your best_beta.
+                    >>> # It should be a list of numbers separated by commas and enclosed in 
+                    >>> # square brackets. There should be one number for each of your
+                    >>> # best explanatory variables (plus one more if you used an intercept).
+                    >>> (type(best_beta) == list) and (len(best_beta)== len(best_expl_vars) + best_intercept) 
+                    True
+                    """
+                }
+            ]
+        }
+    ]
+}

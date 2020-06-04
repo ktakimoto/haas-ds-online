@@ -1,0 +1,38 @@
+test = {
+    'name': 'pred',
+    'suites': [
+        {
+            'cases': [
+                {
+                    'code': r"""
+                    >>> # It looks like the knn_predictions variable hasn't been defined.
+                    >>> # Did you remember to run the cell and add your answer?
+                    >>> ('knn_predictions' in vars()) and (type(knn_predictions) != type(...))
+                    True
+                    """
+                },
+                {
+                    'code': r"""
+                    >>> # You currently don't have the right number of predictions.
+                    >>> # Check to make sure you made predictions for the TEST set,
+                    >>> # not the TRAINING set.
+                    >>> knn_predictions.shape[0] == X_test_att.shape[0]
+                    True
+                    """
+                },                
+                {
+                    'code': r"""
+                    >>> # Your predictions don't look quite right yet.
+                    >>> # Every prediction should either be a 0 (for no attrition)
+                    >>> # or a 1 (for attrition).
+                    >>> # Make sure you made your predictions using your KNN model's
+                    >>> # predict method.
+                    >>> np.all(knn_predictions) in (0, 1)
+                    True
+                    """
+                }
+
+            ]
+        }
+    ]
+}
