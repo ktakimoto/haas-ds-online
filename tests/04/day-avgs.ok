@@ -15,7 +15,7 @@ test = {
                     'code': r"""
                     >>> # Did you forget to add an aggregation method after you used groupby?
                     >>> # For this question, you want to use mean as the aggregation method.
-                    >>> type(day_rates) == pd.core.groupby.groupby.DataFrameGroupBy
+                    >>> type(day_rates) == pd.core.groupby.generic.DataFrameGroupBy
                     False
                     """
                 },
